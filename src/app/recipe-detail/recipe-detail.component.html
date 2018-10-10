@@ -1,7 +1,5 @@
-<div class="card">
-  <h2 class="recipe-text">Cuisine: {{recipe.cuisine | uppercase}}</h2>
-  <p class="recipe-text">Ingredients: {{recipe.ingredients}}</p>
-  <p>ID: {{recipe.id}}</p>
-
+<div class="card" *ngIf="recipe">
+  <div [innerHTML]="recipe?.title.rendered"></div>
+  <div [innerHTML]="recipe?.content.rendered"></div>
 </div>
 <a routerLink="/recipes">Back</a>
