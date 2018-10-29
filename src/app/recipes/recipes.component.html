@@ -1,0 +1,12 @@
+<h2>My Recipes</h2>
+
+<div class="recipes">
+  <div class="card" *ngFor="let recipe of recipes">
+    <h1 class="recipe-text">{{recipe.title.rendered}}</h1>
+    <p class="recipe-text">{{recipe.ingredients}}</p>
+    <p>ID: {{recipe.id}}</p>
+    <a routerLink="/recipe/{{recipe.id}}">
+      <h1 class="recipe-text">Detail</h1>
+    </a>
+  </div>
+</div>

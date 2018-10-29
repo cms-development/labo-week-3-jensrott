@@ -1,0 +1,5 @@
+<div class="card" *ngIf="recipe">
+  <div [innerHTML]="recipe?.title.rendered"></div>
+  <div [innerHTML]="recipe?.content.rendered"></div>
+</div>
+<a routerLink="/recipes">Back</a>
